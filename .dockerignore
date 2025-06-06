@@ -1,0 +1,16 @@
+# .dockerignore
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.env
+.git
+.gitignore
+README.md
+.env
+venv/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
