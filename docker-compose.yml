@@ -9,9 +9,9 @@ services:
       - "8000:8000"
     environment:
       - DJANGO_SETTINGS_MODULE=backend.settings
-      - DEBUG=0
+      - DEBUG=1
       - SECRET_KEY=your-secret-key-here
-      - ALLOWED_HOSTS=localhost,backend
+      - ALLOWED_HOSTS=*  # For development only
       - CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:80
     volumes:
       - ./backend:/app
@@ -29,17 +29,3 @@ services:
     depends_on:
       - backend
     restart: always
-
-  # Uncomment if you're using PostgreSQL
-  # db:
-  #   image: postgres:13
-  #   environment:
-  #     - POSTGRES_DB=github_insights
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data/
-
-# Uncomment if using PostgreSQL
-# volumes:
-#   postgres_data:

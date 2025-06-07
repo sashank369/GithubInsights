@@ -13,15 +13,15 @@ A web application that provides insights and analytics for any public GitHub rep
 
 - **Frontend**: React.js with Material-UI
 - **Backend**: Django REST Framework
-- **Database**: MySQL
+- **Database**: SQLite (built-in with Django)
 - **Charts**: Chart.js
 
 ## Prerequisites
 
 - Python 3.8+
 - Node.js 14+
-- MySQL 5.7+
 - Git
+- Docker (optional, for containerized deployment)
 
 ## Backend Setup
 
@@ -46,16 +46,9 @@ A web application that provides insights and analytics for any public GitHub rep
    pip install -r requirements.txt
    ```
 
-4. Create a MySQL database named `github_insights` (or any other name you prefer).
-
-5. Create a `.env` file in the `backend` directory with your database credentials:
+4. Create a `.env` file in the `backend` directory with your GitHub token (optional but recommended for higher rate limits):
    ```
-   DB_NAME=github_insights
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_HOST=localhost
-   DB_PORT=3306
-   GITHUB_TOKEN=your_github_token  # Optional but recommended for higher rate limits
+   GITHUB_TOKEN=your_github_token
    ```
 
 6. Run migrations:
@@ -69,23 +62,11 @@ A web application that provides insights and analytics for any public GitHub rep
    ```
 
 ## Frontend Setup
-
-1. Navigate to the frontend directory:
    ```bash
    cd frontend
-   ```
-
-2. Install the required packages:
-   ```bash
    npm install
-   ```
-
-3. Start the development server:
-   ```bash
    npm start
    ```
-
-4. The application should now be running at `http://localhost:3000`
 
 ## Usage
 
@@ -102,12 +83,7 @@ A web application that provides insights and analytics for any public GitHub rep
 
 ### Backend
 
-- `DB_NAME` - MySQL database name
-- `DB_USER` - MySQL username
-- `DB_PASSWORD` - MySQL password
-- `DB_HOST` - MySQL host (default: localhost)
-- `DB_PORT` - MySQL port (default: 3306)
-- `GITHUB_TOKEN` - GitHub personal access token (optional but recommended)
+- `GITHUB_TOKEN` - GitHub personal access token (optional but recommended for higher rate limits)
 
 ## Contributing
 

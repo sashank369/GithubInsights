@@ -1,4 +1,4 @@
-#!C:\Users\Sashank Reddy\Desktop\WindSurf_Assignment\github-insights\backend\venv\Scripts\python.exe
+#!C:\Users\Sashank Reddy\Desktop\github-insights\backend\venv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
